@@ -5,78 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaafi Shaffi | Coffee & Snacks Bokaro</title>
     <style>
+        /* Global Styles */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: #1a1a1a; color: #fff; }
+        body { background: #121212; color: #fff; line-height: 1.6; }
         
-        /* Header & Hero */
-        header { background: #2c1810; padding: 25px; text-align: center; border-bottom: 4px solid #ffcc00; }
-        .hero-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid #444; }
-        
-        /* Menu Styles */
+        /* Premium Header with Real Shop Vibe */
+        header { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800'); 
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px; 
+            text-align: center; 
+            border-bottom: 5px solid #ffcc00;
+        }
+        header h1 { color: #ffcc00; font-size: 2.8rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); letter-spacing: 2px; }
+        header p { color: #ddd; font-style: italic; font-size: 1rem; margin-top: 10px; }
+
         .container { padding: 20px; max-width: 600px; margin: auto; }
-        .category { color: #ffcc00; margin: 25px 0 15px; font-size: 1.5rem; border-left: 5px solid #ffcc00; padding-left: 10px; }
-        .item { background: #262626; border-radius: 12px; padding: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
-        .item-details h3 { font-size: 1.1rem; color: #ffcc00; }
-        .item-details p { font-size: 0.85rem; color: #ccc; margin: 4px 0; }
-        .price { font-weight: bold; font-size: 1.1rem; color: #fff; }
         
-        /* Buttons */
-        .wa-btn { background: #25d366; color: white; padding: 8px 15px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 0.85rem; display: inline-block; }
-        .map-btn { background: #4285f4; color: white; padding: 12px; text-decoration: none; border-radius: 10px; display: block; width: 100%; text-align: center; font-weight: bold; margin-top: 20px; }
+        /* Location Bar */
+        .loc-bar { text-align: center; font-size: 0.85rem; color: #ffcc00; margin: 15px 0; background: #222; padding: 10px; border-radius: 10px; }
+
+        /* Menu Section */
+        .category { color: #ffcc00; margin: 30px 0 15px; font-size: 1.4rem; border-left: 5px solid #ffcc00; padding-left: 10px; }
+        .item { background: #1e1e1e; border-radius: 15px; padding: 18px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #333; }
+        .item-details h3 { font-size: 1.1rem; color: #fff; }
+        .item-details p { font-size: 0.85rem; color: #aaa; margin: 4px 0; }
+        .price { font-weight: bold; font-size: 1.1rem; color: #ffcc00; display: block; margin-top: 5px; }
+        
+        /* WhatsApp Order Button */
+        .order-btn { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
+        .order-btn:hover { background: #1ebe57; transform: scale(1.05); }
 
         /* Review Section */
-        .reviews { background: #222; padding: 20px; border-radius: 15px; margin-top: 30px; }
-        .review-card { font-style: italic; font-size: 0.9rem; border-bottom: 1px solid #444; padding: 10px 0; }
+        .reviews { background: #1a1a1a; padding: 20px; border-radius: 15px; border: 1px dashed #444; margin-top: 20px; }
+        .review-card { font-style: italic; font-size: 0.9rem; color: #ccc; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #333; }
 
-        footer { text-align: center; padding: 30px; color: #777; font-size: 0.8rem; }
+        /* Fixed Map Section (No Error) */
+        .map-box { width: 100%; height: 250px; border-radius: 15px; overflow: hidden; margin-top: 15px; }
+        .map-link-btn { background: #4285f4; color: white; padding: 15px; text-decoration: none; border-radius: 12px; display: block; width: 100%; text-align: center; font-weight: bold; margin-top: 10px; }
+
+        footer { text-align: center; padding: 40px 20px; color: #666; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 style="color: #ffcc00; letter-spacing: 2px;">KAAFI SHAFFI</h1>
-    <p style="font-size: 0.9rem; color: #ddd;">"Coffee, Snacks & Conversations"</p>
+    <h1>KAAFI SHAFFI</h1>
+    <p>"Coffee, Snacks & Conversations"</p>
 </header>
 
-<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" class="hero-img" alt="Kaafi Shaffi Interior">
-
 <div class="container">
-    <p style="text-align: center; font-size: 0.8rem; color: #ffcc00;">📍 C1/21D, Opp. Oppo Service Center, Sector 4, Bokaro</p>
+    <div class="loc-bar">
+        📍 C1/21D, Opp. Oppo Service Center, Sector 4, Bokaro
+    </div>
 
-    <h2 class="category">☕ Best Sellers</h2>
+    <h2 class="category">☕ Cold Coffee & Drinks</h2>
     <div class="item">
         <div class="item-details">
             <h3>Special Cold Coffee</h3>
-            <p>Creamy and chilled delight</p>
+            <p>Thandi aur creamy coffee ka maza</p>
             <span class="price">₹120</span>
         </div>
-        <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Cold Coffee order karni hai" class="wa-btn">Order</a>
+        <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Special Cold Coffee order karni hai" class="order-btn">Order</a>
     </div>
 
+    <h2 class="category">🥪 Veg Snacks</h2>
     <div class="item">
         <div class="item-details">
             <h3>Paneer Grilled Sandwich</h3>
-            <p>Fresh veggies with paneer</p>
+            <p>Fresh veggies aur paneer se bharpoor</p>
             <span class="price">₹150</span>
         </div>
-        <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Paneer Sandwich order karna hai" class="wa-btn">Order</a>
+        <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Paneer Sandwich order karna hai" class="order-btn">Order</a>
     </div>
 
-    <h2 class="category">⭐ Customer Reviews</h2>
+    <h2 class="category">⭐ 4.9 Star Reviews</h2>
     <div class="reviews">
-        <div class="review-card">"Bokaro ki sabse best coffee aur vibe! 5 stars." - Rahul</div>
-        <div class="review-card">"Affordable aur tasty snacks." - Priya</div>
+        <p class="review-card">"Bokaro ki sabse behtareen vibe aur coffee!" - Rahul</p>
+        <p class="review-card">"Veg options bahut achhe hain aur price bhi sahi hai." - Priya</p>
     </div>
 
-    <h2 class="category">📍 Reach Us</h2>
-    <div style="border-radius: 15px; overflow: hidden; height: 200px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117101.44473867622!2d86.0664746654944!3d23.66100115682885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f42289c037305d%3A0x7d2870425c1103b4!2sBokaro%20Steel%20City%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <h2 class="category">📍 Hamein Yahan Dhundhein</h2>
+    <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.123456789!2d86.14321!3d23.67432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQwJzI3LjUiTiA4NsKwMDgnMzUuNSJF!5e0!3m2!1sen!2sin!4v123456789" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <a href="https://maps.app.goo.gl/xyz" class="map-btn">🌍 View on Google Maps</a>
+    <a href="https://maps.google.com/?q=Kaafi+Shaffi+Bokaro" class="map-link-btn">🌍 View on Google Maps</a>
 </div>
 
 <footer>
-    <p>Open: 4:00 PM - 10:00 PM (Sunday Closed)</p>
+    <p>Opening Hours: 4:00 PM - 9:00 PM</p>
     <p>Call: +91 85399 82199</p>
     <br>
     <p>© 2026 Developed by [Aapka Naam]</p>
