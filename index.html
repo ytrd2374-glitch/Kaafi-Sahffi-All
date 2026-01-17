@@ -38,12 +38,16 @@
         .order-btn { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
         .order-btn:hover { background: #1ebe57; transform: scale(1.05); }
 
-        /* Review Section */
+        /* Review Section (No Names, Only Stars) */
         .reviews { background: #1a1a1a; padding: 20px; border-radius: 15px; border: 1px dashed #444; margin-top: 20px; }
-        .review-card { font-style: italic; font-size: 0.9rem; color: #ccc; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        .review-card { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        .review-card span { color: #ffcc00; font-size: 1.2rem; }
+        .review-card p { font-style: italic; font-size: 0.9rem; color: #ccc; margin-top: 5px; }
+        
+        .google-btn { display: block; text-align: center; background: #fff; color: #000; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 0.85rem; }
 
-        /* Fixed Map Section (No Error) */
-        .map-box { width: 100%; height: 250px; border-radius: 15px; overflow: hidden; margin-top: 15px; }
+        /* Fixed Map Section */
+        .map-box { width: 100%; height: 250px; border-radius: 15px; overflow: hidden; margin-top: 15px; border: 1px solid #333; }
         .map-link-btn { background: #4285f4; color: white; padding: 15px; text-decoration: none; border-radius: 12px; display: block; width: 100%; text-align: center; font-weight: bold; margin-top: 10px; }
 
         footer { text-align: center; padding: 40px 20px; color: #666; font-size: 0.8rem; }
@@ -81,21 +85,31 @@
         <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Paneer Sandwich order karna hai" class="order-btn">Order</a>
     </div>
 
-    <h2 class="category">⭐ 4.9 Star Reviews</h2>
+    <h2 class="category">⭐ 4.9 Rating (35 Reviews)</h2>
     <div class="reviews">
-        <p class="review-card">"Bokaro ki sabse behtareen vibe aur coffee!" - Rahul</p>
-        <p class="review-card">"Veg options bahut achhe hain aur price bhi sahi hai." - Priya</p>
+        <div class="review-card">
+            <span>⭐⭐⭐⭐⭐</span>
+            <p>"Bokaro ki sabse behtareen vibe aur premium coffee!"</p>
+        </div>
+        <div class="review-card">
+            <span>⭐⭐⭐⭐⭐</span>
+            <p>"Affordable prices aur swadisht veg snacks."</p>
+        </div>
+        <a href="https://www.google.com/search?q=Kaafi+Shaffi+Bokaro#lrd=0x39f4234246b1d425:0x96e6b80a81483b99,3" target="_blank" class="google-btn">
+            ✍️ Write a Google Review
+        </a>
     </div>
 
-    <h2 class="category">📍 Hamein Yahan Dhundhein</h2>
+    <h2 class="category">📍 Reach Us</h2>
     <div class="map-box">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.123456789!2d86.14321!3d23.67432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQwJzI3LjUiTiA4NsKwMDgnMzUuNSJF!5e0!3m2!1sen!2sin!4v123456789" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.555!2d86.143!3d23.668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4234246b1d425%3A0x96e6b80a81483b99!2sKaafi%20Shaffi!5e0!3m2!1sen!2sin!4v1700000000000" 
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <a href="https://maps.google.com/?q=Kaafi+Shaffi+Bokaro" class="map-link-btn">🌍 View on Google Maps</a>
+    <a href="https://maps.app.goo.gl/uP9f6U18R4Xq8WvL6" class="map-link-btn">🌍 View on Google Maps</a>
 </div>
 
 <footer>
-    <p>Opening Hours: 4:00 PM - 9:00 PM</p>
+    <p>Opening Hours: 4:00 PM - 10:00 PM</p>
     <p>Call: +91 85399 82199</p>
     <br>
     <p>© 2026 Developed by [Aapka Naam]</p>
