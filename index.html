@@ -29,26 +29,27 @@
 
         /* Menu Section */
         .category { color: #ffcc00; margin: 30px 0 15px; font-size: 1.4rem; border-left: 5px solid #ffcc00; padding-left: 10px; }
-        .item { background: #1e1e1e; border-radius: 15px; padding: 18px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #333; }
+        .item { background: #1e1e1e; border-radius: 15px; padding: 18px; margin-bottom: 20px; border: 1px solid #333; display: flex; flex-direction: column; gap: 12px; }
+        .item-top { display: flex; justify-content: space-between; align-items: center; }
         .item-details h3 { font-size: 1.1rem; color: #fff; }
         .item-details p { font-size: 0.85rem; color: #aaa; margin: 4px 0; }
         .price { font-weight: bold; font-size: 1.1rem; color: #ffcc00; display: block; margin-top: 5px; }
         
-        /* WhatsApp Order Button */
-        .order-btn { background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        .order-btn:hover { background: #1ebe57; transform: scale(1.05); }
+        /* Action Buttons */
+        .btn-group { display: flex; gap: 10px; width: 100%; }
+        .order-btn { flex: 1; text-align: center; background: #25d366; color: white; padding: 10px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 0.9rem; }
+        .call-btn { flex: 1; text-align: center; background: #4285f4; color: white; padding: 10px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 0.9rem; }
 
-        /* Reviews */
+        /* Reviews (No Names) */
         .reviews { background: #1a1a1a; padding: 20px; border-radius: 15px; border: 1px dashed #444; margin-top: 20px; }
         .review-card { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #333; }
         .review-card span { color: #ffcc00; font-size: 1.2rem; }
         .review-card p { font-style: italic; font-size: 0.9rem; color: #ccc; margin-top: 5px; }
-        
         .google-btn { display: block; text-align: center; background: #fff; color: #000; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 0.85rem; }
 
-        /* Map Section Fixed */
+        /* Map Section */
         .map-box { width: 100%; height: 250px; border-radius: 15px; overflow: hidden; margin-top: 15px; border: 1px solid #333; }
-        .map-link-btn { background: #4285f4; color: white; padding: 15px; text-decoration: none; border-radius: 12px; display: block; width: 100%; text-align: center; font-weight: bold; margin-top: 10px; }
+        .map-link-btn { background: #db4437; color: white; padding: 15px; text-decoration: none; border-radius: 12px; display: block; width: 100%; text-align: center; font-weight: bold; margin-top: 10px; }
 
         footer { text-align: center; padding: 40px 20px; color: #666; font-size: 0.8rem; }
     </style>
@@ -65,24 +66,34 @@
         📍 C1/21D, Opp. Oppo Service Center, Sector 4, Bokaro
     </div>
 
- <h2 class="category">☕ Cold Coffee & Drinks</h2>
+    <h2 class="category">☕ Best Sellers</h2>
     <div class="item">
-        <div class="item-details">
-            <h3>Special Cold Coffee</h3>
-            <p>Thandi aur creamy coffee ka maza</p>
-            <span class="price">₹80</span> </div>
-        <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Special Cold Coffee order karni hai" class="order-btn">Order</a>
+        <div class="item-top">
+            <div class="item-details">
+                <h3>Special Cold Coffee</h3>
+                <p>Thandi aur creamy coffee ka maza</p>
+                <span class="price">₹80</span>
+            </div>
+        </div>
+        <div class="btn-group">
+            <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Special Cold Coffee order karni hai" class="order-btn">WhatsApp</a>
+            <a href="tel:+918539982199" class="call-btn">📞 Call</a>
+        </div>
     </div>
 
-    <h2 class="category">🥪 Veg Snacks</h2>
     <div class="item">
-        <div class="item-details">
-            <h3>Paneer Grilled Sandwich</h3>
-            <p>Fresh veggies aur paneer se bharpoor</p>
-            <span class="price">₹99</span> </div>
-        <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Paneer Sandwich order karna hai" class="order-btn">Order</a>
+        <div class="item-top">
+            <div class="item-details">
+                <h3>Paneer Grilled Sandwich</h3>
+                <p>Fresh veggies aur paneer se bharpoor</p>
+                <span class="price">₹99</span>
+            </div>
+        </div>
+        <div class="btn-group">
+            <a href="https://wa.me/918539982199?text=Hi, mujhe 1 Paneer Sandwich order karna hai" class="order-btn">WhatsApp</a>
+            <a href="tel:+918539982199" class="call-btn">📞 Call</a>
+        </div>
     </div>
-    
 
     <h2 class="category">⭐ 4.9 Rating (35 Reviews)</h2>
     <div class="reviews">
@@ -101,23 +112,18 @@
 
     <h2 class="category">📍 Reach Us</h2>
     <div class="map-box">
-        <iframe 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            style="border:0" 
-            src="https://maps.google.com/maps?q=Kaafi+Shaffi+Sector+4+Bokaro&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-            allowfullscreen>
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.550!2d86.143!3d23.669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4234246b1d425%3A0x96e6b80a81483b99!2sKaafi%20Shaffi!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen>
         </iframe>
     </div>
-    <a href="https://www.google.com/maps/search/Kaafi+Shaffi+Bokaro" target="_blank" class="map-link-btn">🌍 View on Google Maps</a>
+    <a href="https://maps.app.goo.gl/r6SjS6hY7A7A2A2A" target="_blank" class="map-link-btn">🌍 View on Google Maps</a>
 </div>
 
 <footer>
-    <p>Opening Hours: 4:00 PM - 9:00 PM</p>
+    <p>Opening Hours: 4:00 PM - 9:00 PM (Sunday Closed)</p>
     <p>Call: +91 85399 82199</p>
     <br>
-    <p>© 2026 Developed by [Aapka Naam]</p>
+    <p>© 2026 Developed for Kaafi Shaffi</p>
 </footer>
 
 </body>
